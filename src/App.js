@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import NavBar from './Navbar.js';
 import Vote from './Vote';
+import Create from './Create'
+import Join from './Join';
+import Home from './Home';
 
 function App() {
 
@@ -10,16 +12,21 @@ function App() {
     <>
     <Router>
     <div className='App'>
-      <NavBar></NavBar>
+      <NavBar />
     <div className='content'>
       <Switch>
         <Route exact path="/">
-          <h1>Welcome to FeedBack</h1>
+          <Home />
+        </Route>
+        <Route path="/create">
+          <Create />
+        </Route>
+        <Route path="/join">
+          <Join />  
         </Route>
         <Route path="/vote">
           <Vote />  
         </Route>
-        <Vote />
       </Switch> 
     </div>
     </div>

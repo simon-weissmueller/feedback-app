@@ -6,9 +6,9 @@ import {useState} from 'react'
 const Home = () => {
 
     const [running, setRunning] = useState([
-        {title: "VS", prof: "Karl", body: "lorem ipsum...", id: 1},
-        {title: "TI", prof: "Friedrich", body: "lorem ipsum...", id: 2},
-        {title: "SWT", prof: "Hirschfeld", body: "lorem ipsum...", id: 3}
+        {lecture_name: "VS", prof: "Karl", body: "lorem ipsum...", id: 1},
+        {lecture_name: "TI", prof: "Friedrich", body: "lorem ipsum...", id: 2},
+        {lecture_name: "SWT", prof: "Hirschfeld", body: "lorem ipsum...", id: 3}
     ]);
 
 

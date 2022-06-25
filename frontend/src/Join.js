@@ -14,7 +14,7 @@ const Join = () => {
     const handleShow = () => {
         api.get('').then(res => {
             setSessions(res.data)
-            console.log(sessions)
+            console.log(sessions.title)
         })
 
     }

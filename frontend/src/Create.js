@@ -6,14 +6,41 @@ const api = axios.create({
 
 const Create = () => {
 
-    const handleCreate = () => {
-        console.log("create")
+    let prof = ""
+    let title = ""
+    let multiple = false
+
+    const handleSubmit = () => {
+        console.log(prof)
+        console.log(title)
+        console.log(multiple)
     }
 
     return(
         <>
         <h1>Create a Session</h1>
-        <button onClick={handleCreate}>Create Session</button>
+        <form onSubmit={handleSubmit}> 
+            <label>Professor</label>
+            <input 
+            type="text" 
+            required
+            onChange={(e) => prof = e.target.value}
+             />
+             <label>Veranstaltung</label>
+            <input 
+            type="text" 
+            required
+            onChange={(e) => title = e.target.value}
+             />
+             <label>Mehrfach abstimmen ermöglichen</label>
+            <input 
+            type="checkbox" 
+            required
+            onChange={(e) => (e.target.checked) ? multiple = true : multiple = false}
+             />
+             <button>Create Session</button>
+            </form>
+
         </>
     );
 }

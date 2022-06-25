@@ -112,5 +112,12 @@ div{
   100% { background-position: 0 0; }
 }
 
+input{
+  display: block;
+  box-sizing: border-box;
+  width: 30%;
+  margin: 0% auto;
 
+
+}
 
